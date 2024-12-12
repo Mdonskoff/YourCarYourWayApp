@@ -1,15 +1,28 @@
-<p>support-chat works!</p>
+<app-header></app-header>
 
-<div *ngFor="let message of listMessage; index as i">
-  <div *ngIf="listMessage[i].id == 1">
-    <span>{{ message.date | date: 'dd/MMM/yyyy HH:mm:ss' }} </span>
-    <p> chat {{ message.message }}</p>
-  </div>
-  <div *ngIf="listMessage[i].id == 0">
-    <span>{{ message.date | date: 'dd/MMM/yyyy HH:mm:ss' }} </span>
-    <p> support {{ message.message }}</p>
+<div class="card">
+  <div class="card__body">
+    <div class="card__top">
+      <div class="card__message">
+        <div class="message" *ngFor="let message of listMessage; index as i">
+          <div class="client" *ngIf="listMessage[i].id == 1">
+            <span class="client__date">{{ message.date | date: 'dd/MMM/yyyy HH:mm:ss' }} </span>
+            <p class="client__message"> Client : {{ message.message }}</p>
+          </div>
+          <div class="service" *ngIf="listMessage[i].id == 0">
+            <span class="service__date">{{ message.date | date: 'dd/MMM/yyyy HH:mm:ss' }} </span>
+            <p class="service__message"> {{ message.message }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card__bottom">
+      <div class="chat">
+        <input type = "text" #content placeholder="Entrez votre message">
+      </div>
+      <div class="sendMsg">
+      <button class="sendBtn" (click)="sendMessage(content.value)">Envoyer</button>
   </div>
 </div>
-
-<input type = "text" #content placeholder="Entrez votre message">
-<button (click)="sendMessage(content.value)">Envoyer</button>
+</div>
+</div>

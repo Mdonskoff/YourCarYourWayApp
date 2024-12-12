@@ -3,13 +3,15 @@ import {MessageInterface} from '../../interface/message.interface';
 import {ChatServiceService} from '../../service/chat-service.service';
 import {DatePipe, NgForOf, NgIf} from '@angular/common';
 import {Subscription} from 'rxjs';
+import {HeaderComponent} from '../../../core/header/header.component';
 
 @Component({
   selector: 'app-support-chat',
   imports: [
     DatePipe,
     NgForOf,
-    NgIf
+    NgIf,
+    HeaderComponent
   ],
   templateUrl: './support-chat.component.html',
   standalone: true,

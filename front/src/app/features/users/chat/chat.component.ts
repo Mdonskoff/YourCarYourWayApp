@@ -1,15 +1,17 @@
 import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {ChatServiceService} from '../../service/chat-service.service';
 import {MessageInterface} from '../../interface/message.interface';
-import {DatePipe, NgForOf, NgIf} from '@angular/common';
+import {DatePipe, NgForOf, NgIf, NgOptimizedImage} from '@angular/common';
 import {Subscription} from 'rxjs';
+import {HeaderComponent} from '../../../core/header/header.component';
 
 @Component({
   selector: 'app-chat',
   imports: [
     DatePipe,
     NgForOf,
-    NgIf
+    NgIf,
+    HeaderComponent
   ],
   templateUrl: './chat.component.html',
   standalone: true,

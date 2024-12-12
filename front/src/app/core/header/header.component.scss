@@ -1,0 +1,37 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+
+  .right {
+    width: 400px;
+
+    &__info{
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 20px;
+    }
+  }
+}
+.info {
+
+  &__lang, &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    img{
+      width: 26px;
+      height: 27px;
+      margin-right: 6px;
+    }
+  }
+
+}
+
+.flag {
+  width: 25px;
+  height: 15px;
+  margin-right: 6px;
+}
