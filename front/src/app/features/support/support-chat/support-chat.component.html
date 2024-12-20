@@ -5,13 +5,13 @@
     <div class="card__top">
       <div class="card__message">
         <div class="message" *ngFor="let message of listMessage; index as i">
-          <div class="client" *ngIf="listMessage[i].id == 1">
+          <div class="client" *ngIf="listMessage[i].id == 0">
             <span class="client__date">{{ message.date | date: 'dd/MMM/yyyy HH:mm:ss' }} </span>
-            <p class="client__message"> Client : {{ message.message }}</p>
+            <p class="client__message">{{ message.message }}</p>
           </div>
-          <div class="service" *ngIf="listMessage[i].id == 0">
+          <div class="service" *ngIf="listMessage[i].id == 1">
             <span class="service__date">{{ message.date | date: 'dd/MMM/yyyy HH:mm:ss' }} </span>
-            <p class="service__message"> {{ message.message }}</p>
+            <p class="service__message"> Client : {{ message.message }}</p>
           </div>
         </div>
       </div>
